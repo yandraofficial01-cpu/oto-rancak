@@ -542,7 +542,7 @@ async function loadMobil(){
     allMobil = cleanData
 .filter(m => {
         const slugBenar = safeString(m.slug_showroom).toLowerCase() === SLUG_SHOWROOM_INI.toLowerCase();
-        const statusBenar = isAktif(m.status_anak) && isAktif(m.status_induk);
+        const statusBenar = isAktif(m.status_anak);
         return slugBenar && statusBenar;
       })
 .slice(0, 40)
